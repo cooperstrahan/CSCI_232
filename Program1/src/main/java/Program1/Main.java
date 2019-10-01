@@ -17,7 +17,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Integer[] arr = {5, 4, 3, 2, 1};
+        String[] arr = {"A", "C", "D", "E", "G"};
         Integer[] arr1 = {5, 4, 3, 2, 1};
 //        Integer[] arr2 = {5, 4, 3, 2, 1};
         

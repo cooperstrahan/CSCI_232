@@ -5,9 +5,7 @@
  */
 package Lab4;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.util.Arrays;
 
 /**
  *
@@ -57,13 +55,13 @@ public class QuickSort {
 
             // check if pointers cross
             if (i >= j) break;
-
+              
             exch(a, i, j);
         }
 
         // put partitioning item v at a[j]
         exch(a, lo, j);
-
+               
         // now, a[lo .. j-1] <= a[j] <= a[j+1 .. hi]
         return j;
     }
@@ -131,25 +129,5 @@ public class QuickSort {
             System.out.print(a[i] + " ");
         }
         System.out.println();
-    }
-    public static void main(String[] args) throws FileNotFoundException {
-     
-        File file = new File(args[0]);
-        int i = 0;
-        
-        Scanner scanner = new Scanner(file);
-        
-        int n = scanner.nextInt();
-        
-        String[] strs = new String[n];
-        while (scanner.hasNext()) {
-            strs[i] = scanner.next();
-            i++;
-        }
-        QuickSort.sort(strs);
-        show(strs);
-        
-    }   
-
-    
+    }    
 }

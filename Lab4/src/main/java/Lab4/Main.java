@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         Integer[] a = new Integer[100000];
-        Integer[] b = new Integer[100000];
+        Integer[] b = new Integer[100000];        
         Random r = new Random();
         
         for(int i = 0; i < a.length; i++){
@@ -35,9 +35,8 @@ public class Main {
         
         StopWatch mswatch = new StopWatch();
         MergeSort.sort(b);
-        System.out.println("MergeSort took " + qswatch.elapsedTime());
-        
-        
+        System.out.println("MergeSort took " + mswatch.elapsedTime());
+       
         System.out.println("Does a equal b? " + Arrays.equals(a, b));
     }
     
