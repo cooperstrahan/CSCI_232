@@ -31,8 +31,8 @@ public class BubbleSort {
                 if(a[j].compareTo(a[k]) > 0)
                 {
                     swap(a, j, k);
-                    System.out.println("Swapping " + a[j] + " and " + a[k]);
-                    System.out.println(Arrays.toString(a));
+//                    System.out.println("Swapping " + a[j] + " and " + a[k]);
+//                    System.out.println(Arrays.toString(a));
                 }
             }
             isSorted = sorted(a);

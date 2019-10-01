@@ -6,7 +6,7 @@
 package Program1;
 
 import java.util.Arrays;
-
+import java.util.Random;
 /**
  *
  * @author cooperstrahan
@@ -17,17 +17,36 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        String[] arr = {"A", "C", "D", "E", "G"};
-//        Integer[] arr1 = {5, 4, 3, 2, 1};
-        int[] arr2 = {51, 42, 37, 12, 18, 11, 94 ,15};
+
+        Random r = new Random();
+        Integer[] a = new Integer[100000];
+        Integer[] b = new Integer[100000];
+        Integer[] c = new Integer[100000];
         
-//        BubbleSort.sort(arr);
-//        CocktailSort.sort(arr1);
+        for(int i = 0; i < a.length; i++){
+            int rand = r.nextInt(500000) + 1;
+            a[i] = rand;
+            b[i] = rand;
+            c[i] = rand;
+        }
         
-        RadixSort.sort(arr2);
+        StopWatch bsort = new StopWatch();
+        BubbleSort.sort(a);
+        System.out.println("BubbleSort time: " + bsort.elapsedTime());
         
-//        System.out.print(Arrays.toString(arr));
+        StopWatch rsort = new StopWatch();
+        RadixSort.sort(b);
+        System.out.println("RadixSort time: " + rsort.elapsedTime());
         
+        StopWatch csort = new StopWatch();
+        CocktailSort.sort(c);
+        System.out.println("CocktailSort time: " + csort.elapsedTime());
+        
+        
+
+        System.out.println("Does a equal b? " + Arrays.equals(a, b));
+        System.out.println("Does a equal c? " + Arrays.equals(a, c));
+        System.out.println("Does b equal c? " + Arrays.equals(b, c));
         
     }
     

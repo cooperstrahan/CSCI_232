@@ -27,20 +27,20 @@ public class CocktailSort {
                 if(a[j].compareTo(a[j+1]) > 0)
                 {
                     swap(a, j, j+1);
-                    System.out.println("Swapping " + a[j] + " and " + a[j+1]);
-                    System.out.println(Arrays.toString(a));
+//                    System.out.println("Swapping " + a[j] + " and " + a[j+1]);
+//                    System.out.println(Arrays.toString(a));
                 }
             }
             iterations++;
             sorted(a);
             for(int k = a.length - iterations - 2; k > 0; k --)
             {
-                System.out.println("Comparing " + a[k] + " and " + a[k-1]);
+//                System.out.println("Comparing " + a[k] + " and " + a[k-1]);
                 if(a[k].compareTo(a[k-1]) < 0)
                 {
-                    System.out.println("Swapping " + a[k] + " and " + a[k-1]);
+//                    System.out.println("Swapping " + a[k] + " and " + a[k-1]);
                     swap(a, k, k-1);
-                    System.out.println(Arrays.toString(a));
+//                    System.out.println(Arrays.toString(a));
                 }
             }
             isSorted = sorted(a);
