@@ -7,7 +7,6 @@ package Lab5;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -57,8 +56,6 @@ public class Main {
         Float[] realsArray = new Float[rcount];
 
         i = 0;
-
-        DecimalFormat d = new DecimalFormat();
 
         while (rscan2.hasNext()) {
             float a = Float.parseFloat(rscan2.next());
