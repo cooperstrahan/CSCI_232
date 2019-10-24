@@ -21,7 +21,7 @@ public class QuickSort {
      * @param a the array to be sorted
      */
     public static void sort(Comparable[] a) {
-        StdRandom.shuffle(a);
+//        StdRandom.shuffle(a);
         sort(a, 0, a.length - 1);
         assert isSorted(a);
     }
@@ -55,14 +55,18 @@ public class QuickSort {
 
             // check if pointers cross
             if (i >= j) break;
-              
+            
+            System.out.println(a[i] + " " + a[j]);
             exch(a, i, j);
+            System.out.println(Arrays.toString(a));
         }
-
+        
         // put partitioning item v at a[j]
+        System.out.println(a[lo] + " " + a[j]);
         exch(a, lo, j);
                
         // now, a[lo .. j-1] <= a[j] <= a[j+1 .. hi]
+        System.out.println(Arrays.toString(a));
         return j;
     }
 
